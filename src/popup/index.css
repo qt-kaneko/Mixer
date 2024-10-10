@@ -1,0 +1,19 @@
+body {
+  background: #2b2a33;
+}
+
+input[type=range][orient=vertical] {
+  appearance: slider-vertical;
+}
+
+#label {
+  color: #FBFBFE;
+}
+.container {
+  padding: 4px 0px;
+  width: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}

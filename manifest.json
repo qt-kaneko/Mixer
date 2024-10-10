@@ -1,0 +1,31 @@
+{
+  "manifest_version": 2,
+
+  "name": "Mixer",
+  "version": "1.0.0",
+
+  "browser_specific_settings": {
+    "gecko": {"id": "mixer@qt-kaneko.github.io"}
+  },
+
+  "permissions": [
+    "storage"
+  ],
+
+  "background": {
+    "scripts": ["background.js"]
+  },
+
+  "content_scripts": [{
+    "matches": ["<all_urls>"],
+    "js": ["./contentScript.js"],
+    "run_at": "document_end"
+  }],
+
+  "page_action": {
+    "browser_style": true,
+    "default_icon": "./popup/icon.png",
+    "default_title": "Mixer",
+    "default_popup": "./popup/index.html"
+  }
+}
